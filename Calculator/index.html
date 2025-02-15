@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+    <style>
+        
+        body{
+            display: flex;
+            justify-content: center;
+        }
+.box{
+    background-color: antiquewhite;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border: 4px solid rgb(33, 13, 33);
+    border-radius: 19px;
+    width: 400px;
+    justify-content: center;
+    
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Simple Calculator</h1>
+
+        Value 1: <input type="number" id="n1"> <br><br>
+        Value 2:<input type="number" id="n2"><br><br>
+        Operations::
+        <select name="" id="calculate">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="calculator()">Calculate</button>
+        <br><br>
+
+        Result : <input type="number" id="result">
+        
+    </div>
+
+    <script>
+            function calculator(){
+        let a = document.getElementById('n1').value;
+        let b = document.getElementById('n2').value;
+        let c = document.getElementById('calculate').value;
+        
+
+        if(c==='+'){
+        let a = parseInt(document.getElementById('n1').value);
+        let b = parseInt(document.getElementById('n2').value);
+        document.getElementById('result').value = a+b;
+        }
+        if(c==='-'){
+        let a = parseInt(document.getElementById('n1').value);
+        let b = parseInt(document.getElementById('n2').value);
+        document.getElementById('result').value = a-b;
+        }
+        if(c==='*'){
+        let a = parseInt(document.getElementById('n1').value);
+        let b = parseInt(document.getElementById('n2').value);
+        document.getElementById('result').value = a*b;
+        }
+        if(c==='/'){
+        let a = parseInt(document.getElementById('n1').value);
+        let b = parseInt(document.getElementById('n2').value);
+        document.getElementById('result').value = a/b;
+        }
+            }
+    </script>
+</body>
+</html>
