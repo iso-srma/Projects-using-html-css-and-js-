@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .box{
+            border: 5px solid black;
+            text-align: center;
+            justify-content: center;
+            
+        }
+        button{
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Chooses your Favourite colours</h2>
+        <button id="b1" style="background-color: red;">Red</button>
+        <button id="b2" style="background-color: green;">Green</button>
+        <button id="b3" style="background-color: yellow;">Yellow</button>
+        <button id="b4" style="background-color: purple;">Purple</button>
+        <button id="b5" style="background-color: orange;">Orange</button>
+    </div>
+    </div>
+    <script>
+        function cbc(color){
+            document.body.style.backgroundColor=color;
+        }
+        document.getElementById("b1").addEventListener("click",function(){
+            cbc("red");
+        });
+
+        document.getElementById("b2").addEventListener("click", function () {
+            cbc("green");
+        });
+
+        document.getElementById("b3").addEventListener("click", function () {
+            cbc("yellow");
+        });
+
+        document.getElementById("b4").addEventListener("click", function () {
+            cbc("purple");
+        });
+
+        document.getElementById("b5").addEventListener("click", function () {
+            cbc("orange");
+        });
+    </script>
+</body>
+</html>
